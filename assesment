@@ -1,0 +1,22 @@
+const Nfts = []
+function mintNFT(_name, _eyeColor, _shirtType, _bling){
+    const NFT = {
+      "name":_name,
+      "eyeColor":_eyeColor,
+      "shirtType":_shirtType,
+      "bling":_bling
+    }
+    Nfts.push(NFT);
+    console.log("Minted" + _name); 
+}
+function listNFTs (){
+  for (let i =0; i<Nfts.length; i++){
+    console.log(Nfts[i]);
+  }
+}
+function getTotalSupply() {
+  console.log(Nfts.length);
+}
+mintNFT("Bob","Blue","Hoodie","Gold Chain");
+listNFTs();
+getTotalSupply();
